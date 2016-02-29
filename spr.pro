@@ -13,3 +13,8 @@ QMAKE_CXXFLAGS_RELEASE *= -O3
 LIBS += -larmadillo
 
 INCLUDEPATH += include/
+
+OTHER_FILES += .astylerc
+
+SOURCES += \
+    src/main.cpp

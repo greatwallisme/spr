@@ -18,8 +18,13 @@ OTHER_FILES += .astylerc
 
 SOURCES += \
     src/main.cpp \
-    src/GeneralClasses/Vector.cpp
+    src/GeneralClasses/Vector.cpp \
+    src/Materials/Material.cpp \
+    src/GeneralClasses/Length.cpp
 
 HEADERS += \
     include/GeneralClasses/Complex.h \
-    include/GeneralClasses/Vector.h
+    include/GeneralClasses/Vector.h \
+    include/Materials/Material.h \
+    include/GeneralClasses/PhysicalConstants.h \
+    include/GeneralClasses/Length.h

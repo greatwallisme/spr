@@ -20,6 +20,11 @@ double Vector::z() const
     return vec[2];
 }
 
+double Vector::abs() const
+{
+    return std::sqrt(operator %(*this));
+}
+
 Vector Vector::operator +(const Vector &other) const
 {
     return Vector(x() + other.x(), y() + other.y(), z() + other.z());

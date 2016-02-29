@@ -12,10 +12,11 @@ public:
     double y() const;
     double z() const;
 
+    double abs() const;
+
     Vector operator+(const Vector&) const;
     Vector operator-() const;
     Vector operator-(const Vector&) const;
-
     Vector operator*(const Vector&) const; //Vectorial Product
     double operator%(const Vector&) const; //Dot Product
 

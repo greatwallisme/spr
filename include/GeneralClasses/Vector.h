@@ -14,11 +14,17 @@ public:
 
     double abs() const;
 
+    Vector getVersor() const;
+
     Vector operator+(const Vector&) const;
     Vector operator-() const;
     Vector operator-(const Vector&) const;
+    Vector operator*(const double) const; //Scalar Product
     Vector operator*(const Vector&) const; //Vectorial Product
     double operator%(const Vector&) const; //Dot Product
+    Vector operator/(const double) const;
+
+    bool isNull() const;
 
 private:
     arma::rowvec vec;

@@ -1,4 +1,5 @@
 #include "include/GeneralClasses/Vector.h"
+#include <boost/assert.hpp>
 
 Vector::Vector(double x, double y, double z)
 {
@@ -40,6 +41,11 @@ Vector Vector::operator -(const Vector &other) const
     return operator +(-other);
 }
 
+Vector Vector::operator *(const double k) const
+{
+    return Vector(k * x(), k * y(), k * z());
+}
+
 Vector Vector::operator *(const Vector &other) const
 {
     return Vector(y() * other.z() - z() * other.y(),
@@ -50,4 +56,20 @@ Vector Vector::operator *(const Vector &other) const
 double Vector::operator %(const Vector &other) const
 {
     return (x() * other.x()) + (y() * other.y()) + (z() * other.z());
+}
+
+Vector Vector::operator /(const double k) const
+{
+    BOOST_ASSERT_MSG(k != 0, "Impossible to divide a vector by zero.");
+    return operator *(1.0 / k);
+}
+
+bool Vector::isNull() const
+{
+    return (abs() == 0);
+}
+
+Vector Vector::getVersor() const
+{
+    return this->operator /(abs());
 }

@@ -20,11 +20,14 @@ SOURCES += \
     src/main.cpp \
     src/GeneralClasses/Vector.cpp \
     src/Materials/Material.cpp \
-    src/GeneralClasses/Length.cpp
+    src/GeneralClasses/Length.cpp \
+    src/Materials/Material_Gold.cpp
 
 HEADERS += \
     include/GeneralClasses/Complex.h \
     include/GeneralClasses/Vector.h \
     include/Materials/Material.h \
     include/GeneralClasses/PhysicalConstants.h \
-    include/GeneralClasses/Length.h
+    include/GeneralClasses/Length.h \
+    include/Materials/Material_Gold.h \
+    include/Materials.h

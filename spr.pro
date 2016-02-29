@@ -17,4 +17,9 @@ INCLUDEPATH += include/
 OTHER_FILES += .astylerc
 
 SOURCES += \
-    src/main.cpp
+    src/main.cpp \
+    src/GeneralClasses/Vector.cpp
+
+HEADERS += \
+    include/GeneralClasses/Complex.h \
+    include/GeneralClasses/Vector.h

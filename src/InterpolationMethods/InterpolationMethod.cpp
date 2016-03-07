@@ -2,8 +2,9 @@
 
 using namespace Interpolation;
 
-InterpolationMethod::InterpolationMethod(std::set<double, double> knownValues)
+InterpolationMethod::InterpolationMethod (std::set<knownPoint> knownValues)
     : knownValues(knownValues)
 {
-
+    minRange = knownValues.begin()->first;
+    maxRange = knownValues.rbegin()->first;
 }

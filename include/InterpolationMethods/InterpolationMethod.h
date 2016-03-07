@@ -8,11 +8,15 @@ namespace Interpolation
 class InterpolationMethod
 {
 public:
-    InterpolationMethod(std::set<double, double> knownValues);
+    typedef std::pair<double, double> knownPoint;
+
+    InterpolationMethod(std::set<knownPoint> knownValues);
     virtual double interpolate(double) = 0;
 
-private:
-    std::set<double, double> knownValues;
+protected:
+    std::set<knownPoint> knownValues;
+    double minRange;
+    double maxRange;
 };
 }
 

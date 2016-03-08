@@ -11,7 +11,8 @@ class Material
 {
 public:
 #define MATERIALS \
-    X(gold, Material_Gold)
+    X(gold, Material_Gold) \
+    X(water, Material_Water)
 
     enum MaterialType
     {

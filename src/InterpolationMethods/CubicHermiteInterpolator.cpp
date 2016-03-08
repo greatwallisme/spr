@@ -11,7 +11,7 @@ CubicHermiteInterpolator::CubicHermiteInterpolator
 
 }
 
-double CubicHermiteInterpolator::interpolate(double x)
+double CubicHermiteInterpolator::interpolate(double x) const
 {
     BOOST_ASSERT_MSG((x >= minRange) && (x <= maxRange),
                      "Interpolation value outside x range.");
@@ -41,32 +41,32 @@ double CubicHermiteInterpolator::interpolate(double x)
 }
 
 double CubicHermiteInterpolator::get_t
-(double x, knownPoint &begin, knownPoint &end)
+(double x, knownPoint &begin, knownPoint &end) const
 {
     return (x - begin.first) / (end.first - begin.first);
 }
 
-double CubicHermiteInterpolator::h00(double t)
+double CubicHermiteInterpolator::h00(double t) const
 {
     return 2 * std::pow(t, 3) - 3 * std::pow(t, 2) + 1;
 }
 
-double CubicHermiteInterpolator::h01(double t)
+double CubicHermiteInterpolator::h01(double t) const
 {
     return - 2 * std::pow(t, 3) + 3 * std::pow(t, 2);
 }
 
-double CubicHermiteInterpolator::h10(double t)
+double CubicHermiteInterpolator::h10(double t) const
 {
     return std::pow(t, 3) - 2 * std::pow(t, 2) + t;
 }
 
-double CubicHermiteInterpolator::h11(double t)
+double CubicHermiteInterpolator::h11(double t) const
 {
     return std::pow(t, 3) - std::pow(t, 2);
 }
 
-double CubicHermiteInterpolator::m(knownPoint &point)
+double CubicHermiteInterpolator::m(knownPoint &point) const
 {
     auto iter = std::find(knownValues.begin(), knownValues.end(), point);
     BOOST_ASSERT_MSG(iter != knownValues.end(), "Unknown point to find tangent");

@@ -9,14 +9,14 @@ Material::Material(MaterialType Type) : Type(Type)
 
 }
 
-complex Material::getRelativePermeability(const Length &lambda) const
+complex Material::getPermeability(const Length &lambda) const
 {
-    return getPermeability(lambda) / PhysicalConstants::mu0;
+    return getRelativePermeability(lambda) * PhysicalConstants::mu0;
 }
 
-complex Material::getRelativePermittivity(const Length &lambda) const
+complex Material::getPermittivity(const Length &lambda) const
 {
-    return getPermittivity(lambda) / PhysicalConstants::epsilon0;
+    return getRelativePermittivity(lambda) * PhysicalConstants::epsilon0;
 }
 
 std::shared_ptr<Material> Material::createMaterial(MaterialType type)

@@ -9,20 +9,22 @@ class CubicHermiteInterpolator : public InterpolationMethod
 {
 public:
     CubicHermiteInterpolator(std::set<knownPoint> knownValues);
-    double interpolate(double x);
+    CubicHermiteInterpolator() {}
+
+    double interpolate(double x) const;
 
 private:
     //Parameter Scaling
-    double get_t(double x, knownPoint &begin, knownPoint &end);
+    double get_t(double x, knownPoint &begin, knownPoint &end) const;
 
     //Hermite Functions
-    double h00(double t);
-    double h01(double t);
-    double h10(double t);
-    double h11(double t);
+    double h00(double t) const;
+    double h01(double t) const;
+    double h10(double t) const;
+    double h11(double t) const;
 
     //Tangents
-    double m(knownPoint &point);
+    double m(knownPoint &point) const;
 };
 }
 

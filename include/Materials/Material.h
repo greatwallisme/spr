@@ -22,11 +22,11 @@ public:
 
     Material(MaterialType);
 
-    virtual complex getPermittivity(const Length &lambda) const = 0;
-    complex getRelativePermittivity(const Length &lambda) const;
+    complex getPermittivity(const Length &lambda) const;
+    virtual complex getRelativePermittivity(const Length &lambda) const = 0;
 
-    virtual complex getPermeability(const Length &lambda) const = 0;
-    complex getRelativePermeability(const Length &lambda) const;
+    complex getPermeability(const Length &lambda) const;
+    virtual complex getRelativePermeability(const Length &lambda) const = 0;
 
     static std::shared_ptr<Material> createMaterial(MaterialType type);
 

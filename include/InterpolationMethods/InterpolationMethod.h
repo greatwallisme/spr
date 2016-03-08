@@ -11,7 +11,10 @@ public:
     typedef std::pair<double, double> knownPoint;
 
     InterpolationMethod(std::set<knownPoint> knownValues);
-    virtual double interpolate(double) = 0;
+    InterpolationMethod() {}
+    void setValues(std::set<knownPoint> knownValues);
+
+    virtual double interpolate(double) const = 0;
 
 protected:
     std::set<knownPoint> knownValues;

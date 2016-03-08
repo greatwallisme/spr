@@ -20,7 +20,7 @@ public:
     };
 
     Length(double length, Unit unit);
-    double getLength(Unit unit = Unit::meter);
+    double get(Unit unit = Unit::meter) const;
 
 private:
     double length;

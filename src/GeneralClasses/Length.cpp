@@ -17,7 +17,7 @@ double Length::convertToMeter(const double length, const Unit unit) const
     return length * conversionFactorToMeter.at(unit);
 }
 
-double Length::getLength(Unit unit)
+double Length::get(Unit unit) const
 {
     return length / conversionFactorToMeter.at(unit);
 }

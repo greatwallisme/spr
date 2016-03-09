@@ -1,6 +1,10 @@
 #include "include/GeneralClasses/Vector.h"
 #include <boost/assert.hpp>
 
+Vector Vector::ax(1, 0, 0);
+Vector Vector::ay(0, 1, 0);
+Vector Vector::az(0, 0, 1);
+
 Vector::Vector(double x, double y, double z)
 {
     vec = {x, y, z};

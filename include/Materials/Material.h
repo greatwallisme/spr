@@ -30,6 +30,8 @@ public:
     complex getPermeability(const Length &lambda) const;
     virtual complex getRelativePermeability(const Length &lambda) const = 0;
 
+    complex getImpedance(const Length &lambda) const;
+
     static std::shared_ptr<Material> createMaterial(MaterialType type);
 
 private:

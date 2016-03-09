@@ -32,3 +32,14 @@ std::shared_ptr<Material> Material::createMaterial(MaterialType type)
 
     return material;
 }
+
+complex Material::getImpedance(const Length &lambda) const
+{
+    double omega = PhysicalConstants::c / lambda.get();
+    double epsilon = std::real(getPermittivity(lambda));
+    double sigma = (-omega) * std::imag(getPermittivity(lambda));
+    complex mu = getPermeability(lambda);
+    complex j = complex(0, 1);
+
+    return std::sqrt((j * omega * mu) / (sigma + j * omega * epsilon));
+}

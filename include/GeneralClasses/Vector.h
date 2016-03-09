@@ -26,6 +26,11 @@ public:
 
     bool isNull() const;
 
+    //Versors
+    static Vector ax;
+    static Vector ay;
+    static Vector az;
+
 private:
     arma::rowvec vec;
 };

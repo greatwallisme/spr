@@ -24,7 +24,8 @@ SOURCES += \
     src/Materials/Material_Gold.cpp \
     src/InterpolationMethods/InterpolationMethod.cpp \
     src/InterpolationMethods/CubicHermiteInterpolator.cpp \
-    src/Materials/Material_Water.cpp
+    src/Materials/Material_Water.cpp \
+    src/Materials/Material_Vacuum.cpp
 
 HEADERS += \
     include/GeneralClasses/Complex.h \
@@ -36,4 +37,5 @@ HEADERS += \
     include/Materials.h \
     include/InterpolationMethods/InterpolationMethod.h \
     include/InterpolationMethods/CubicHermiteInterpolator.h \
-    include/Materials/Material_Water.h
+    include/Materials/Material_Water.h \
+    include/Materials/Material_Vacuum.h

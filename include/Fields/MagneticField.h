@@ -8,7 +8,7 @@ namespace Fields
 class MagneticField : public HarmonicField
 {
 public:
-    MagneticField(double absValue,
+    MagneticField(double magnitude,
                   double phase,
                   Versor direction,
                   Frequency &freq,

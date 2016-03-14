@@ -12,7 +12,7 @@ namespace Fields
 class HarmonicField
 {
 public:
-    HarmonicField(double absValue,
+    HarmonicField(double magnitude,
                   double phase,
                   Versor direction,
                   Frequency &freq,
@@ -20,9 +20,10 @@ public:
 
     Vector getField(double x, double y, double z = 0, double t = 0);
     Versor getDirection() const;
+    double getMagnitude() const;
 
 protected:
-    double absValue;
+    double magnitude;
     double phase;
     Versor direction;
     Frequency freq;

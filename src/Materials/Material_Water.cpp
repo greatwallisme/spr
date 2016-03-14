@@ -21,7 +21,7 @@ complex Material_Water::getRelativePermittivity(const Length &lambda) const
     double n = refractiveIndex.interpolate(lambda.get());
     double k = 0;
 
-    return complex(n * n - k * k, 2 * n * k);
+    return complex(n * n - k * k, -2 * n * k);
 }
 
 double Material_Water::getN(double l) const

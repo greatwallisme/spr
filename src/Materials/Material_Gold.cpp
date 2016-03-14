@@ -30,5 +30,5 @@ complex Material_Gold::getRelativePermittivity(const Length &leng) const
     double n = refractiveIndex.interpolate(leng.get());
     double k = extinctionCoefficient.interpolate(leng.get());
 
-    return complex(n * n - k * k, 2 * n * k);
+    return complex(n * n - k * k, -2 * n * k);
 }

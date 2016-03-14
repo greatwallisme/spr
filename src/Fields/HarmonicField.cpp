@@ -4,7 +4,7 @@ using namespace Fields;
 
 HarmonicField::HarmonicField(double absValue,
                              double phase,
-                             Vector direction,
+                             Versor direction,
                              Length &lambda,
                              complex gamma) :
     absValue(absValue), phase(phase), direction(direction.getVersor()),

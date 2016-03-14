@@ -3,7 +3,7 @@
 
 #include "GeneralClasses/Length.h"
 #include "GeneralClasses/Complex.h"
-#include "GeneralClasses/Vector.h"
+#include "GeneralClasses/Versor.h"
 
 namespace Fields
 {
@@ -12,7 +12,7 @@ class HarmonicField
 public:
     HarmonicField(double absValue,
                   double phase,
-                  Vector direction,
+                  Versor direction,
                   Length &lambda,
                   complex gamma);
 
@@ -21,7 +21,7 @@ public:
 protected:
     double absValue;
     double phase;
-    Vector direction;
+    Versor direction;
     Length lambda;
     complex gamma;
 };

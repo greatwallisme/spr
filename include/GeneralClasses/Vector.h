@@ -3,10 +3,13 @@
 
 #include <armadillo>
 
+class Versor;
+
 class Vector
 {
 public:
     Vector(double x, double y, double z);
+    Vector(const Versor &versor, double abs);
 
     double x() const;
     double y() const;
@@ -14,7 +17,7 @@ public:
 
     double abs() const;
 
-    Vector getVersor() const;
+    Versor getVersor() const;
 
     Vector operator+(const Vector&) const;
     Vector operator-() const;
@@ -25,11 +28,6 @@ public:
     Vector operator/(const double) const;
 
     bool isNull() const;
-
-    //Versors
-    static Vector ax;
-    static Vector ay;
-    static Vector az;
 
 private:
     arma::rowvec vec;

@@ -26,7 +26,8 @@ SOURCES += \
     src/InterpolationMethods/CubicHermiteInterpolator.cpp \
     src/Materials/Material_Water.cpp \
     src/Materials/Material_Vacuum.cpp \
-    src/Fields/HarmonicField.cpp
+    src/Fields/HarmonicField.cpp \
+    src/GeneralClasses/Versor.cpp
 
 HEADERS += \
     include/GeneralClasses/Complex.h \
@@ -40,4 +41,5 @@ HEADERS += \
     include/InterpolationMethods/CubicHermiteInterpolator.h \
     include/Materials/Material_Water.h \
     include/Materials/Material_Vacuum.h \
-    include/Fields/HarmonicField.h
+    include/Fields/HarmonicField.h \
+    include/GeneralClasses/Versor.h

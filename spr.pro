@@ -31,7 +31,8 @@ SOURCES += \
     src/Fields/ElectricalField.cpp \
     src/Fields/MagneticField.cpp \
     src/Waves/PlaneWave.cpp \
-    src/GeneralClasses/Frequency.cpp
+    src/GeneralClasses/Frequency.cpp \
+    src/Incidences/Incidence.cpp
 
 HEADERS += \
     include/GeneralClasses/Complex.h \
@@ -50,4 +51,5 @@ HEADERS += \
     include/Fields/ElectricalField.h \
     include/Fields/MagneticField.h \
     include/Waves/PlaneWave.h \
-    include/GeneralClasses/Frequency.h
+    include/GeneralClasses/Frequency.h \
+    include/Incidences/Incidence.h

@@ -43,3 +43,14 @@ complex Material::getImpedance(const Length &lambda) const
 
     return std::sqrt((j * omega * mu) / (sigma + j * omega * epsilon));
 }
+
+Frequency Material::getFrequency(const Length &lambda)
+{
+    double v = PhysicalConstants::c / getRefractiveIndex(lambda);
+    return Frequency(v / lambda.get(), Frequency::Hz);
+}
+
+Length Material::getWavelength(const Frequency &freq)
+{
+    return Length(PhysicalConstants::c / freq.get(Frequency::Hz), Length::meter);
+}

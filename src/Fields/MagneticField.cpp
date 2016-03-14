@@ -5,8 +5,8 @@ using namespace Fields;
 MagneticField::MagneticField(double absValue,
                              double phase,
                              Versor direction,
-                             Length &lambda,
-                             complex gamma) : HarmonicField(absValue, phase, direction, lambda, gamma)
+                             Frequency &freq,
+                             complex gamma) : HarmonicField(absValue, phase, direction, freq, gamma)
 {
 
 }

@@ -13,6 +13,8 @@ public:
 
     complex getRelativePermeability(const Length &lambda) const;
     complex getRelativePermittivity(const Length &lambda) const;
+    double getRefractiveIndex(const Length &lambda) const;
+    double getExtinctionCoefficient(const Length &lambda) const;
 
 private:
     Interpolation::CubicHermiteInterpolator refractiveIndex;

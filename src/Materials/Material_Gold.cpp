@@ -25,10 +25,20 @@ complex Material_Gold::getRelativePermeability(const Length &) const
     return 1;
 }
 
-complex Material_Gold::getRelativePermittivity(const Length &leng) const
+complex Material_Gold::getRelativePermittivity(const Length &lambda) const
 {
-    double n = refractiveIndex.interpolate(leng.get());
-    double k = extinctionCoefficient.interpolate(leng.get());
+    double n = getRefractiveIndex(lambda);
+    double k = getExtinctionCoefficient(lambda);
 
     return complex(n * n - k * k, -2 * n * k);
+}
+
+double Material_Gold::getRefractiveIndex(const Length &lambda) const
+{
+    return refractiveIndex.interpolate(lambda.get());
+}
+
+double Material_Gold::getExtinctionCoefficient(const Length &lambda) const
+{
+    return extinctionCoefficient.interpolate(lambda.get());
 }

@@ -18,10 +18,20 @@ complex Material_Water::getRelativePermeability(const Length &) const
 
 complex Material_Water::getRelativePermittivity(const Length &lambda) const
 {
-    double n = refractiveIndex.interpolate(lambda.get());
-    double k = 0;
+    double n = getRefractiveIndex(lambda);
+    double k = getExtinctionCoefficient(lambda);
 
     return complex(n * n - k * k, -2 * n * k);
+}
+
+double Material_Water::getRefractiveIndex(const Length &lambda) const
+{
+    return refractiveIndex.interpolate(lambda.get());
+}
+
+double Material_Water::getExtinctionCoefficient(const Length &) const
+{
+    return 0.0;
 }
 
 double Material_Water::getN(double l) const

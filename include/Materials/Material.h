@@ -2,6 +2,7 @@
 #define MATERIAL_H
 
 #include "GeneralClasses/Length.h"
+#include "GeneralClasses/Frequency.h"
 #include "GeneralClasses/Complex.h"
 #include <memory>
 
@@ -32,7 +33,12 @@ public:
     complex getPermeability(const Length &lambda) const;
     virtual complex getRelativePermeability(const Length &lambda) const = 0;
 
+    virtual double getRefractiveIndex(const Length &lambda) const = 0;
+    virtual double getExtinctionCoefficient(const Length &lambda) const = 0;
+
     complex getImpedance(const Length &lambda) const;
+    Frequency getFrequency(const Length &lambda);
+    Length getWavelength(const Frequency &freq);
 
     static std::shared_ptr<Material> createMaterial(MaterialType type);
 

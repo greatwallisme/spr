@@ -11,7 +11,7 @@ public:
     MagneticField(double absValue,
                   double phase,
                   Versor direction,
-                  Length &lambda,
+                  Frequency &freq,
                   complex gamma);
 };
 }

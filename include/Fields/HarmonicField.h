@@ -1,7 +1,7 @@
 #ifndef HARMONICFIELD_H
 #define HARMONICFIELD_H
 
-#include "GeneralClasses/Length.h"
+#include "GeneralClasses/Frequency.h"
 #include "GeneralClasses/Complex.h"
 #include "GeneralClasses/Versor.h"
 
@@ -15,16 +15,17 @@ public:
     HarmonicField(double absValue,
                   double phase,
                   Versor direction,
-                  Length &lambda,
+                  Frequency &freq,
                   complex gamma);
 
-    Vector getField(double x, double y, double z = 0);
+    Vector getField(double x, double y, double z = 0, double t = 0);
+    Versor getDirection() const;
 
 protected:
     double absValue;
     double phase;
     Versor direction;
-    Length lambda;
+    Frequency freq;
     complex gamma;
 };
 }

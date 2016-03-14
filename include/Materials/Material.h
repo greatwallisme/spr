@@ -5,6 +5,8 @@
 #include "GeneralClasses/Complex.h"
 #include <memory>
 
+using namespace Misc;
+
 namespace Materials
 {
 class Material

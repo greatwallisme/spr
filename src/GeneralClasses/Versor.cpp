@@ -1,5 +1,7 @@
 #include "include/GeneralClasses/Versor.h"
 
+using namespace Misc;
+
 Versor Versor::ax(1, 0, 0);
 Versor Versor::ay(0, 1, 0);
 Versor Versor::az(0, 0, 1);

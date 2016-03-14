@@ -3,6 +3,8 @@
 
 #include <map>
 
+namespace Misc
+{
 class Length
 {
 public:
@@ -28,5 +30,6 @@ private:
     static std::map<Unit, double> conversionFactorToMeter;
     double convertToMeter(const double length, const Unit unit) const;
 };
+}
 
 #endif // LENGTH_H

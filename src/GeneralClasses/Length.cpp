@@ -1,5 +1,7 @@
 #include "include/GeneralClasses/Length.h"
 
+using namespace Misc;
+
 std::map<Length::Unit, double> Length::conversionFactorToMeter =
 {
 #define X(a,b) {a,b},

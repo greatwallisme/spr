@@ -3,6 +3,8 @@
 
 #include <armadillo>
 
+namespace Misc
+{
 class Versor;
 
 class Vector
@@ -32,5 +34,6 @@ public:
 private:
     arma::rowvec vec;
 };
+}
 
 #endif // VECTOR_H

@@ -27,7 +27,9 @@ SOURCES += \
     src/Materials/Material_Water.cpp \
     src/Materials/Material_Vacuum.cpp \
     src/Fields/HarmonicField.cpp \
-    src/GeneralClasses/Versor.cpp
+    src/GeneralClasses/Versor.cpp \
+    src/Fields/ElectricalField.cpp \
+    src/Fields/MagneticField.cpp
 
 HEADERS += \
     include/GeneralClasses/Complex.h \
@@ -42,4 +44,6 @@ HEADERS += \
     include/Materials/Material_Water.h \
     include/Materials/Material_Vacuum.h \
     include/Fields/HarmonicField.h \
-    include/GeneralClasses/Versor.h
+    include/GeneralClasses/Versor.h \
+    include/Fields/ElectricalField.h \
+    include/Fields/MagneticField.h

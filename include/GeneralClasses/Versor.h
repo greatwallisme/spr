@@ -3,6 +3,8 @@
 
 #include "Vector.h"
 
+namespace Misc
+{
 class Versor : public Vector
 {
 public:
@@ -14,5 +16,6 @@ public:
     static Versor ay;
     static Versor az;
 };
+}
 
 #endif // VERSOR_H

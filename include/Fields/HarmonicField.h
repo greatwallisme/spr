@@ -5,6 +5,8 @@
 #include "GeneralClasses/Complex.h"
 #include "GeneralClasses/Versor.h"
 
+using namespace Misc;
+
 namespace Fields
 {
 class HarmonicField

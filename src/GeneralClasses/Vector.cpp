@@ -2,6 +2,8 @@
 #include "include/GeneralClasses/Versor.h"
 #include <boost/assert.hpp>
 
+using namespace Misc;
+
 Vector::Vector(double x, double y, double z)
 {
     vec = {x, y, z};

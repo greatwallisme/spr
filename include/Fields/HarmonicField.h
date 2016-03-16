@@ -12,8 +12,7 @@ namespace Fields
 class HarmonicField
 {
 public:
-    HarmonicField(double magnitude,
-                  double phase,
+    HarmonicField(complex magnitude,
                   Versor direction,
                   Frequency &freq,
                   complex gamma);
@@ -23,8 +22,7 @@ public:
     double getMagnitude() const;
 
 protected:
-    double magnitude;
-    double phase;
+    complex magnitude;
     Versor direction;
     Frequency freq;
     complex gamma;

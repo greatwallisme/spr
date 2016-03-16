@@ -8,8 +8,7 @@ namespace Fields
 class ElectricalField : public HarmonicField
 {
 public:
-    ElectricalField(double magnitude,
-                    double phase,
+    ElectricalField(complex magnitude,
                     Versor direction,
                     Frequency &freq,
                     complex gamma);

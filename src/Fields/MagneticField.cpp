@@ -2,11 +2,10 @@
 
 using namespace Fields;
 
-MagneticField::MagneticField(double absValue,
-                             double phase,
+MagneticField::MagneticField(complex magnitude,
                              Versor direction,
                              Frequency &freq,
-                             complex gamma) : HarmonicField(absValue, phase, direction, freq, gamma)
+                             complex gamma) : HarmonicField(magnitude, direction, freq, gamma)
 {
 
 }

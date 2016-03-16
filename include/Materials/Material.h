@@ -37,6 +37,8 @@ public:
     virtual double getExtinctionCoefficient(const Length &lambda) const = 0;
 
     complex getImpedance(const Length &lambda) const;
+    complex getGamma(const Length &lambda) const;
+
     Frequency getFrequency(const Length &lambda);
     Length getWavelength(const Frequency &freq);
 

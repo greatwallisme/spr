@@ -32,9 +32,9 @@ SOURCES += \
     src/Fields/MagneticField.cpp \
     src/Waves/PlaneWave.cpp \
     src/GeneralClasses/Frequency.cpp \
-    src/Incidences/Incidence.cpp \
     src/Incidences/Parallel_Incidence.cpp \
-    src/Incidences/Perpendicular_Incidence.cpp
+    src/Incidences/Perpendicular_Incidence.cpp \
+    src/Incidences/Interface.cpp
 
 HEADERS += \
     include/GeneralClasses/Complex.h \
@@ -54,6 +54,8 @@ HEADERS += \
     include/Fields/MagneticField.h \
     include/Waves/PlaneWave.h \
     include/GeneralClasses/Frequency.h \
-    include/Incidences/Incidence.h \
     include/Incidences/Parallel_Incidence.h \
-    include/Incidences/Perpendicular_Incidence.h
+    include/Incidences/Perpendicular_Incidence.h \
+    include/Incidences.h \
+    include/Incidences/Interface.h \
+    include/Fields.h

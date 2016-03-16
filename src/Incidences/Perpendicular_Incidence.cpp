@@ -1,11 +1,11 @@
 #include "include/Incidences/Perpendicular_Incidence.h"
 
-using namespace Incidences;
+using namespace Interfaces;
 
 Perpendicular_Incidence::Perpendicular_Incidence(
     std::shared_ptr<Materials::Material> A,
     std::shared_ptr<Materials::Material> B,
-    Versor v) : Incidence(perpendicular, A, B, v)
+    Versor v) : Interface(perpendicular, A, B, v)
 {
 
 }

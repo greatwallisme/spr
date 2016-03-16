@@ -1,5 +1,5 @@
-#ifndef INCIDENCE_H
-#define INCIDENCE_H
+#ifndef INTERFACE_H
+#define INTERFACE_H
 
 #include "GeneralClasses/Versor.h"
 #include "Waves/PlaneWave.h"
@@ -7,9 +7,9 @@
 
 using namespace Misc;
 
-namespace Incidences
+namespace Interfaces
 {
-class Incidence
+class Interface
 {
 #define INCIDENCETYPE \
     X(parallel, Parallel_Incidence) \
@@ -23,12 +23,19 @@ public:
 #undef X
     };
 
-    Incidence(IncidenceType, std::shared_ptr<Materials::Material>,
+    Interface(IncidenceType, std::shared_ptr<Materials::Material>,
               std::shared_ptr<Materials::Material>, Versor = Versor::ay);
 
-    virtual Waves::PlaneWave createIndicentPlaneWave(Frequency &, double magn) = 0;
+    virtual Waves::PlaneWave createIncidentWave(Frequency &, Versor &, double) = 0;
     virtual Waves::PlaneWave getReflectedWave(Waves::PlaneWave indicentWave) = 0;
     virtual Waves::PlaneWave getTransmittedWave(Waves::PlaneWave incidentWave) = 0;
+
+    std::shared_ptr<Interface> reverseInterface();
+
+    static std::shared_ptr<Interface> createIncidence(IncidenceType,
+            std::shared_ptr<Materials::Material>,
+            std::shared_ptr<Materials::Material>,
+            Versor = Versor::ay);
 
 protected:
     IncidenceType type;
@@ -38,4 +45,4 @@ protected:
 };
 }
 
-#endif // INCIDENCE_H
+#endif // INTERFACE_H

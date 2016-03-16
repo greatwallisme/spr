@@ -1,11 +1,11 @@
 #ifndef PERPENDICULAR_INCIDENCE_H
 #define PERPENDICULAR_INCIDENCE_H
 
-#include "Incidence.h"
+#include "Interface.h"
 
-namespace Incidences
+namespace Interfaces
 {
-class Perpendicular_Incidence : public Incidence
+class Perpendicular_Incidence : public Interface
 {
 public:
     Perpendicular_Incidence(std::shared_ptr<Materials::Material> A,

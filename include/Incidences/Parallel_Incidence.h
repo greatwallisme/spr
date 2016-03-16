@@ -1,16 +1,18 @@
 #ifndef PARALLEL_INCIDENCE_H
 #define PARALLEL_INCIDENCE_H
 
-#include "Incidence.h"
+#include "Interface.h"
 
-namespace Incidences
+namespace Interfaces
 {
-class Parallel_Incidence : public Incidence
+class Parallel_Incidence : public Interface
 {
 public:
     Parallel_Incidence(std::shared_ptr<Materials::Material> A,
                        std::shared_ptr<Materials::Material> B,
                        Versor v = Versor::ay);
+
+    Waves::PlaneWave createIncidentWave(Frequency &freq, Versor &dir, double magn);
 };
 }
 

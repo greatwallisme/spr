@@ -16,3 +16,28 @@ Versor::Versor(const Vector &vec) : Vector(vec.getVersor())
 {
 
 }
+
+Versor Versor::operator +(const Versor &v) const
+{
+    return (*this + v).getVersor();
+}
+
+Versor Versor::operator -() const
+{
+    return (-*this).getVersor();
+}
+
+Versor Versor::operator -(const Versor &v) const
+{
+    return (*this - v).getVersor();
+}
+
+Versor Versor::operator *(const Versor &v) const
+{
+    return ((*this) * v).getVersor();
+}
+
+Vector Versor::operator *(const double mag) const
+{
+    return Vector(*this, mag);
+}

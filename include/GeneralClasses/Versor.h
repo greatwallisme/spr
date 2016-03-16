@@ -15,6 +15,12 @@ public:
     static Versor ax;
     static Versor ay;
     static Versor az;
+
+    Versor operator+(const Versor&) const;
+    Versor operator-() const;
+    Versor operator-(const Versor&) const;
+    Versor operator*(const Versor&) const; //Vectorial Product
+    Vector operator*(const double) const;
 };
 }
 

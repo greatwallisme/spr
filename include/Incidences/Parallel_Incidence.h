@@ -12,7 +12,7 @@ public:
                        std::shared_ptr<Materials::Material> B,
                        Versor v = Versor::ay);
 
-    Waves::PlaneWave createIncidentWave(Frequency &freq, Versor &dir, double magn);
+    Waves::PlaneWave createIncidentWave(Frequency &freq, Versor &k, double magn);
 };
 }
 

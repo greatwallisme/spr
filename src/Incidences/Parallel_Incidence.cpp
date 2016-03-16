@@ -10,7 +10,8 @@ Parallel_Incidence::Parallel_Incidence(std::shared_ptr<Materials::Material> A,
 }
 
 Waves::PlaneWave Parallel_Incidence::createIncidentWave
-(Frequency &freq, Versor &dir, double magn)
+(Frequency &freq, Versor &k, double magn)
 {
-
+    Versor aH = interfaceVersor * k;
+    Versor aE = - k * aH;
 }

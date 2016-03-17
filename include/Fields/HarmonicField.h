@@ -14,12 +14,12 @@ class HarmonicField
 public:
     HarmonicField(complex magnitude,
                   Versor direction,
-                  Frequency &freq,
+                  const Frequency &freq,
                   complex gamma);
 
     Vector getField(double x, double y, double z = 0, double t = 0);
     Versor getDirection() const;
-    double getMagnitude() const;
+    complex getMagnitude() const;
 
 protected:
     complex magnitude;

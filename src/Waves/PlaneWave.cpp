@@ -3,7 +3,7 @@
 using namespace Waves;
 
 PlaneWave::PlaneWave
-(Frequency &freq, std::shared_ptr<Materials::Material> material,
+(const Frequency &freq, std::shared_ptr<Materials::Material> material,
  std::shared_ptr<Fields::ElectricalField> elecField,
  std::shared_ptr<Fields::MagneticField> magnField) :
     magnitude(elecField->getMagnitude()),

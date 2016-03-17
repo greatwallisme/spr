@@ -15,14 +15,15 @@ namespace Waves
 class PlaneWave
 {
 public:
-    PlaneWave(Frequency &freq, std::shared_ptr<Materials::Material> material,
+    PlaneWave(const Frequency &freq, std::shared_ptr<Materials::Material> material,
               std::shared_ptr<Fields::ElectricalField> elecField,
               std::shared_ptr<Fields::MagneticField> magnField);
 
-private:
-    double magnitude;
+    complex magnitude;
     Versor direction;
     Frequency freq;
+
+private:
     std::shared_ptr<Materials::Material> material;
     std::shared_ptr<Fields::ElectricalField> elecField;
     std::shared_ptr<Fields::MagneticField> magnField;

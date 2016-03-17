@@ -10,7 +10,7 @@ class ElectricalField : public HarmonicField
 public:
     ElectricalField(complex magnitude,
                     Versor direction,
-                    Frequency &freq,
+                    const Frequency &freq,
                     complex gamma);
 };
 }

@@ -4,7 +4,7 @@ using namespace Fields;
 
 HarmonicField::HarmonicField(complex magnitude,
                              Versor direction,
-                             Frequency &freq,
+                             const Frequency &freq,
                              complex gamma) :
     magnitude(magnitude), direction(direction.getVersor()), freq(freq), gamma(gamma)
 {
@@ -25,7 +25,7 @@ Versor HarmonicField::getDirection() const
     return direction;
 }
 
-double HarmonicField::getMagnitude() const
+complex HarmonicField::getMagnitude() const
 {
-    return std::abs(magnitude);
+    return magnitude;
 }

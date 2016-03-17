@@ -10,7 +10,7 @@ class MagneticField : public HarmonicField
 public:
     MagneticField(complex magnitude,
                   Versor direction,
-                  Frequency &freq,
+                  const Frequency &freq,
                   complex gamma);
 };
 }

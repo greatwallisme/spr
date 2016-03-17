@@ -27,8 +27,10 @@ public:
               std::shared_ptr<Materials::Material>, Versor = Versor::ay);
 
     virtual Waves::PlaneWave createIncidentWave(Frequency &, Versor &, double) = 0;
-    virtual Waves::PlaneWave getReflectedWave(Waves::PlaneWave indicentWave) = 0;
-    virtual Waves::PlaneWave getTransmittedWave(Waves::PlaneWave incidentWave) = 0;
+    virtual Waves::PlaneWave getReflectedWave
+    (const Waves::PlaneWave &incidentWave) = 0;
+    virtual Waves::PlaneWave getTransmittedWave
+    (const Waves::PlaneWave &incidentWave) = 0;
 
     std::shared_ptr<Interface> reverseInterface();
 

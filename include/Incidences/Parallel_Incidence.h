@@ -13,6 +13,7 @@ public:
                        Versor v = Versor::ay);
 
     Waves::PlaneWave createIncidentWave(Frequency &freq, Versor &k, double magn);
+    Waves::PlaneWave getReflectedWave(const Waves::PlaneWave &incidentWave);
 };
 }
 

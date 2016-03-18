@@ -43,7 +43,7 @@ PlaneWave Parallel_Incidence::getReflectedWave(const PlaneWave &incidentWave)
     Versor aH = interfaceVersor * k;
     Versor aE = - k * aH;
 
-    double thetaIncide = std::acos(interfaceVersor % incidentWave.direction);
+    double thetaIncide = std::acos(interfaceVersor % incidentVector);
     double thetaTransm = std::asin(A->getRefractiveIndex(lambdaA) *
                                    std::sin(thetaIncide) /
                                    B->getRefractiveIndex(lambdaB)); //Snell Law
@@ -65,4 +65,17 @@ PlaneWave Parallel_Incidence::getReflectedWave(const PlaneWave &incidentWave)
                       incidentWave.freq, A->getGamma(lambdaA));
 
     return PlaneWave(incidentWave.freq, A, elecField, magnField);
+}
+
+PlaneWave Parallel_Incidence::getTransmittedWave(const PlaneWave &incidentWave)
+{
+    auto lambdaA = A->getWavelength(incidentWave.freq);
+    auto lambdaB = B->getWavelength(incidentWave.freq);
+
+    Vector incidentVector = incidentWave.direction;
+
+    double thetaIncide = std::acos(interfaceVersor % incidentVector);
+    double thetaTransm = std::asin(A->getRefractiveIndex(lambdaA) *
+                                   std::sin(thetaIncide) /
+                                   B->getRefractiveIndex(lambdaB)); //Snell Law
 }

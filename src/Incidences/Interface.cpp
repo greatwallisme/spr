@@ -23,7 +23,7 @@ std::shared_ptr<Interface> Interface::createIncidence(
     switch (type)
         {
         case parallel:
-            //incidence = std::make_shared<Parallel_Incidence>(A, B, v);
+            incidence = std::make_shared<Parallel_Incidence>(A, B, v);
             break;
 
         case perpendicular:

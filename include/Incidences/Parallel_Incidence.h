@@ -14,6 +14,7 @@ public:
 
     Waves::PlaneWave createIncidentWave(Frequency &freq, Versor &k, double magn);
     Waves::PlaneWave getReflectedWave(const Waves::PlaneWave &incidentWave);
+    Waves::PlaneWave getTransmittedWave(const Waves::PlaneWave &incidentWave);
 };
 }
 
